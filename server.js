@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 // Les sessions sont gardées en mémoire.
 // Elles sont supprimées quand le serveur redémarre.
@@ -18,7 +18,6 @@ const connection = mysql.createConnection({
   user: process.env.DB_USERNAME,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
-  port: process.env.DB_PORT
 });
 
 // Lecture des données reçues et accès aux fichiers du dossier web

@@ -6,6 +6,10 @@ const loginForm = document.getElementById('loginForm');
 const signupForm = document.getElementById('signupForm');
 const logoutButton = document.getElementById('logoutButton');
 const deleteAccountButton = document.getElementById('deleteAccountButton');
+const testinput = document.getElementById('testinput');
+
+
+
 
 async function api(url, options = {}) {
     const response = await fetch(url, {
@@ -36,7 +40,7 @@ async function afficherTableauDeBord() {
 
     const welcomeMessage = document.getElementById('welcomeMessage');
     if (welcomeMessage) {
-        welcomeMessage.textContent = `Bien connecté en tant que ${user.login}`;
+        welcomeMessage.textContent = `Bonjour ${user.login}`; 
     }
 
     if (adminSection) adminSection.hidden = !user.admin;

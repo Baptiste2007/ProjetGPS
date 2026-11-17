@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compte</title>
     <link rel="stylesheet" href="styles.css">
     <script src="main.js" defer></script>
+      
 </head>
+
 <body>
     <section id="loginSection">
-        <h1>Connexion</h1>
-        <form id="loginForm">
-            <label for="loginInput">Identifiant</label>
-            <input id="loginInput" name="login" type="text" required>
+        <div id="bandeau">
 
-            <label for="passwordInput">Mot de passe</label>
-            <input id="passwordInput" name="password" type="password" required>
+            <h1>Connexion</h1>
 
-            <button type="submit">Se connecter</button>
-        </form>
-        <button id="showSignup" type="button">Créer un compte</button>
+            <div id="menu">
+                <div id="menuhaut"></div>
+                <div id="menubas"></div>
+            </div>
+            <div id="menu2">
+                <div id="menuhaut2"></div>
+                <div id="menubas2"></div>
+            </div>
+        </div>
+        <div id="contenu">
+            <form id="loginForm">
+                <label for="loginInput">Identifiant</label>
+                <input id="loginInput" name="login" type="text" required>
+
+                <label for="passwordInput">Mot de passe</label>
+                <input id="passwordInput" name="password" type="password" required>
+
+                <button class="stylebutton" type="submit">Se connecter</button>
+            </form>
+            <button class="stylebutton" id="showSignup" type="button">Créer un compte</button>
+        </div>
+        <div id="piedpage"></div>
     </section>
 
     <section id="signupSection" hidden>
@@ -31,15 +49,40 @@
             <label for="signupPassword">Mot de passe</label>
             <input id="signupPassword" name="inputValue2" type="password" required>
 
-            <button type="submit">S'inscrire</button>
+            <button type="submit">
+                S'inscrire
+            </button>
         </form>
         <button id="showLogin" type="button">Retour à la connexion</button>
     </section>
 
+
     <section id="dashboardSection" hidden>
-        <h1 id="welcomeMessage"></h1>
-        <button id="logoutButton" type="button">Déconnexion</button>
-        <button id="deleteAccountButton" type="button">Supprimer mon compte</button>
+        <div id="bandeau">
+
+            <h1 id="welcomeMessage"></h1>
+
+        </div>
+        <div id="menu">
+            <div id="menuhaut"></div>
+            <div id="menubas"></div>
+        </div>
+        <div id="menu2">
+            <div id="menuhaut2"></div>
+            <div id="menubas2"></div>
+        </div>
+        </div>
+
+        <div id="contenu">
+
+        </div>
+
+        <div id="piedpage">
+            <button class="stylebutton" id="logoutButton" type="button">Déconnexion</button>
+            <button class="stylebutton" id="deleteAccountButton" type="button">Supprimer mon compte</button>
+        </div>
+
+
 
         <section id="adminSection" hidden>
             <h2>Gestion des comptes</h2>
@@ -47,4 +90,5 @@
         </section>
     </section>
 </body>
+
 </html>
