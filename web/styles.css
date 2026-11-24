@@ -1,9 +1,9 @@
 div#bandeau {
 	width: 1900px;
 	height: 50px;
-	background-color: #10e4eb;
+	background-color: #083a3b;
 	clear: both;
-    text-align: center;
+	text-align: center;
 }
 
 div#contenu {
@@ -11,15 +11,23 @@ div#contenu {
 	height: 770px;
 	/*background-color: #10e4eb;*/
 	float: left;
-    text-align: center;
+	text-align: center;
+}
+
+div#contenu2 {
+	width: 1700px;
+	height: 770px;
+	background-color: #083a3b;
+	float: left;
+	text-align: center;
 }
 
 div#piedpage {
 	width: 1900px;
 	height: 50px;
-	background-color: #10e4eb;
+	background-color: #083a3b;
 	clear: both;
-     text-align: center;
+	text-align: center;
 }
 
 
@@ -27,18 +35,18 @@ div#menu {
 	float: left;
 	width: 100px;
 	height: 400px;
-	/*background-color: #10e4eb;*/
+	background-color: #083a3b;
 
 	div#menuhaut {
 		width: 100px;
 		height: 400px;
-		/*background-color: #10e4eb;*/
+		background-color: #083a3b;
 	}
 
 	div#menubas {
 		width: 100px;
 		height: 400px;
-		/*background-color: #10e4eb;*/
+		background-color: #083a3b;
 	}
 }
 
@@ -46,25 +54,30 @@ div#menu2 {
 	float: right;
 	width: 100px;
 	height: 400px;
-	/*background-color: #10e4eb;*/
+	background-color: #083a3b;
 
 	div#menuhaut2 {
 		width: 100px;
 		height: 400px;
-		/*background-color: #10e4eb;*/
+		background-color: #083a3b;
 	}
 
 	div#menubas2 {
 		width: 100px;
 		height: 400px;
-		/*background-color: #10e4eb;*/
+		background-color: #083a3b;
 	}
 }
 
 
-.stylebutton{
-  background-color: #592ada; /* Blue background color */
-  border-radius: 30px; /* Curve of border corners */
-  text-transform: uppercase; /* Make letters uppercase */
-  color: rgb(255, 255, 255); /* Text color */
+.stylebutton {
+	background-color: #ff99ee;
+	border-radius: 30px;
+	text-transform: uppercase;
+	color: rgb(255, 255, 255);
+	
+}
+
+.texte {
+	color: white;
 }

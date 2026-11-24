@@ -10,7 +10,6 @@ const testinput = document.getElementById('testinput');
 
 
 
-
 async function api(url, options = {}) {
     const response = await fetch(url, {
         ...options,
@@ -168,3 +167,4 @@ deleteAccountButton?.addEventListener('click', async () => {
 api('/api/me').then(afficherTableauDeBord).catch(() => {
     afficherConnexion();
 });
+

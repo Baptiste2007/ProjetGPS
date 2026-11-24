@@ -4,9 +4,9 @@ const path = require('path');
 const crypto = require('crypto');
 const bcrypt = require('bcrypt');
 require('dotenv').config();
-
 const app = express();
 const PORT = 3000;
+
 
 // Les sessions sont gardées en mémoire.
 // Elles sont supprimées quand le serveur redémarre.
@@ -213,6 +213,8 @@ app.post('/connexion', (req, res) => {
   );
 });
 
+
+
 // Renvoyer les informations de l'utilisateur connecté
 app.get('/api/me', verifierConnexion, (req, res) => {
   res.json({
@@ -375,3 +377,16 @@ connection.connect((erreur) => {
     console.log(`Serveur démarré sur le port ${PORT}.`);
   });
 });
+
+const { SerialPort } = require('serialport');
+
+const serial = new SerialPort({
+  path: "COM10",
+  baudRate: 9600
+});
+
+serial.on('open', () => {
+  serial.on('data', (data) => {
+    console.log(data);
+  })
+})

@@ -42,7 +42,7 @@
     <section id="loginSection">
         <div id="bandeau">
 
-            <h1>Connexion</h1>
+            <h1 class="texte">Connexions</h1>
 
             <div id="menu">
                 <div id="menuhaut"></div>
@@ -53,18 +53,21 @@
                 <div id="menubas2"></div>
             </div>
         </div>
-        <div id="contenu">
+        <div id="contenu2">
             <form id="loginForm">
-                <label for="loginInput">Identifiant</label>
-                <input id="loginInput" name="login" type="text" required>
-
-                <label for="passwordInput">Mot de passe</label>
-                <input id="passwordInput" name="password" type="password" required>
-
+                <label class="texte" for="loginInput"></label>
+                <label class="texte" for="passwordInput"></label>
+                <br>
+                <input id="loginInput" name="login" type="text" placeholder="Login" required>
+                <input id="passwordInput" name="password" type="password" placeholder="password" required>
                 <button class="stylebutton" type="submit">Se connecter</button>
-            </form>
-            <button class="stylebutton" id="showSignup" type="button">Créer un compte</button>
+                <button class="stylebutton" id="showSignup" type="button">Créer un compte</button>
 
+            </form>
+
+            <br>
+
+            <img src="image/image.png" alt="Dinosaure" width="500" height="500"/>
 
 
         </div>
@@ -91,7 +94,7 @@
     <section id="dashboardSection" hidden>
         <div id="bandeau">
 
-            <h1 id="welcomeMessage"></h1>
+            <h1 class="texte" id="welcomeMessage"></h1>
 
         </div>
         <div id="menu">
@@ -119,7 +122,8 @@
                     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
                 }).addTo(map);
 
-
+                const marker = new Marker([48.850258, 2.359314]).addTo(map)
+                    .bindPopup('<b>Hello world!</b><br />I am a popup.').openPopup();
                 function onMapClick(e) {
                     popup
                         .setLatLng(e.latlng)
