@@ -7,7 +7,35 @@
     <title>Compte</title>
     <link rel="stylesheet" href="styles.css">
     <script src="main.js" defer></script>
-      
+    <link rel="icon" href="../../docs/images/favicon.svg" type="image/svg+xml" />
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@2.0.0-beta.5/dist/leaflet.css"
+        integrity="sha256-LJzbbQFquR1Trwrwy++9x2Pl6ipfBZUR8Da0GGJ8Wfo=" crossorigin="" />
+    <script type="importmap">
+		{
+			"imports": {
+				"leaflet": "https://cdn.jsdelivr.net/npm/leaflet@2.0.0-beta.5/dist/leaflet.js"
+			},
+			"integrity": {
+				"https://cdn.jsdelivr.net/npm/leaflet@2.0.0-beta.5/dist/leaflet.js": "sha256-wtAeAyJwpxq8jkj3LfBxdh3sPS3xw9kViJv+AtdXLDE="
+			}
+		}
+	</script>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .leaflet-container {
+            height: 100%;
+        }
+    </style>
+
+
 </head>
 
 <body>
@@ -36,6 +64,9 @@
                 <button class="stylebutton" type="submit">Se connecter</button>
             </form>
             <button class="stylebutton" id="showSignup" type="button">Créer un compte</button>
+
+
+
         </div>
         <div id="piedpage"></div>
     </section>
@@ -73,7 +104,33 @@
         </div>
         </div>
 
+
+
         <div id="contenu">
+            <div id='map'></div>
+
+            <script type="module">
+                import { LeafletMap, TileLayer, Marker, Circle, Polygon, Popup } from 'leaflet';
+
+                const map = new LeafletMap('map').setView([51.505, -0.09], 13);
+
+                const tiles = new TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19,
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                }).addTo(map);
+
+
+                function onMapClick(e) {
+                    popup
+                        .setLatLng(e.latlng)
+                        .setContent(`You clicked the map at ${e.latlng.toString()}`)
+                        .openOn(map);
+                }
+
+                map.on('click', onMapClick);
+            </script>
+
+
 
         </div>
 
