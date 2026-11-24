@@ -1,18 +1,28 @@
 {
-  "name": "projet1",
+  "name": "projetgps",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Baptiste2007/ProjetGPS.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Baptiste2007/ProjetGPS/issues"
+  },
+  "homepage": "https://github.com/Baptiste2007/ProjetGPS#readme",
   "dependencies": {
     "bcrypt": "^6.0.0",
-    "dotenv": "^18.0.4",
-    "express": "^5.2.1",
-    "ip": "^2.0.1",
-    "mysql2": "^3.24.4"
+    "crypto": "^1.0.1",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "mysql2": "^3.24.6",
+    "path": "^0.12.7"
   }
 }
